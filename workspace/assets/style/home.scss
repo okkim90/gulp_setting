@@ -1,0 +1,16 @@
+@charset 'utl-8';
+
+/* 공통 */
+@import 'common/reset.scss';
+@import 'common/layout.scss';
+@import 'common/header.scss';
+@import 'common/footer.scss';
+
+/* 이미지 스프라이트 */
+@import 'sprite/*-sprite.scss';
+
+/* 홈 스타일 */
+@import 'home/layout.scss';
+@import 'home/main_visual.scss';
+
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulp Test</title>
+    <link rel="stylesheet" href="/assets/lib/swiper.min.css" />
+    <link rel="stylesheet" href="/assets/style/home.css" />
+    <script type="text/javascript" src="/assets/lib/jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header id="header" class="header">
+    <div class="header_inner">
+        <h1 class="logo">Gulp</h1>
+        <ul class="header_nav">
+            <li><a href="">MENU1</a></li>
+            <li><a href="">MENU2</a></li>
+            <li><a href="">MENU3</a></li>
+            <li><a href="">MENU4</a></li>
+            <li><a href="">MENU5</a></li>
+        </ul>
+    </div>
+</header>
+        <!-- // header -->
+        <div id="container" class="container">
+            <div class="main_visual">
+    <div class="swiper-wrapper">
+        
+            <div class="swiper-slide main_visual_item item1">
+                <div class="main_visual_item_cont">
+                    메인 비주얼1
+                </div>
+            </div>
+        
+            <div class="swiper-slide main_visual_item item2">
+                <div class="main_visual_item_cont">
+                    메인 비주얼2
+                </div>
+            </div>
+        
+            <div class="swiper-slide main_visual_item item3">
+                <div class="main_visual_item_cont">
+                    메인 비주얼3
+                </div>
+            </div>
+        
+            <div class="swiper-slide main_visual_item item4">
+                <div class="main_visual_item_cont">
+                    메인 비주얼4
+                </div>
+            </div>
+        
+    </div>
+</div>
+            <div class="inner">
+
+
+                <div class="main_container col_wrap">
+                    <div class="main_sec col2">
+                        <div class="main_sec_inner">
+                            <div class="main_list">
+    
+        <h2 class="main_list_tit">메인 공지사항</h2>
+    
+    <ul >
+        
+            <li><a href=https://www.npmjs.com/package/gulp-file-include target="_blank">공지사항1</a></li>
+        
+            <li><a href=https://dohoons.com/blog/1339/ target="_blank">공지사항2</a></li>
+        
+            <li><a href=https://recoveryman.tistory.com/301?category=652407 target="_blank">공지사항3</a></li>
+        
+    </ul>
+</div>
+
+                        </div>
+                    </div>
+                    <div class="main_sec  col2">
+                        <div class="main_sec_inner">
+                            <div class="main_list">
+    
+        <h2 class="main_list_tit">메인 게시판</h2>
+    
+    <ul >
+        
+            <li><a href=https://www.npmjs.com/package/gulp-file-include target="_blank">게시물 1 게시물 1 게시물 1 게시물 1 </a></li>
+        
+            <li><a href=https://dohoons.com/blog/1339/ target="_blank">게시물 2 게시물 2 게시물 2 게시물 2 게시물 2 게시물 2 </a></li>
+        
+            <li><a href=https://recoveryman.tistory.com/301?category=652407 target="_blank">게시물 3 게시물 3 게시물 3 게시물 3 게시물 3 </a></li>
+        
+    </ul>
+</div>
+
+                        </div>
+                    </div>
+                    <div class="main_sec  col1">
+                        <div class="main_sec_inner">
+                            <div class="main_list">
+    
+        <h2 class="main_list_tit">메인 뉴스</h2>
+    
+    <ul >
+        
+            <li><a href=https://www.npmjs.com/package/gulp-file-include target="_blank">메인 뉴스 1 </a></li>
+        
+            <li><a href=https://dohoons.com/blog/1339/ target="_blank">메인 뉴스 2 </a></li>
+        
+            <li><a href=https://recoveryman.tistory.com/301?category=652407 target="_blank">메인 뉴스 3 </a></li>
+        
+    </ul>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div id="footer" class="footer">
+    footer 영역
+</div>
+        <!-- // footer -->
+    </div>
+
+    <script type="text/javascript" src="/assets/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="/assets/js/common.js"></script>
+    <script>
+        const swiper = new Swiper('.main_visual',{
+            speed: 800,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            }
+        });
+    </script>
+</body>
+</html>

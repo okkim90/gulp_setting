@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulp Test</title>
+    <link rel="stylesheet" href="/assets/lib/swiper.min.css" />
+    <link rel="stylesheet" href="/assets/style/home.css" />
+    <script type="text/javascript" src="/assets/lib/jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        @@include("./include/header.html",{
+            'title': 'Gulp',
+            'active' : 3
+        })
+        <!-- // header -->
+        <div id="container" class="container">
+            @@include("./home/_main_visual.html", {
+                "arr" : [
+                    {"text":"메인 비주얼1", "image":"", "link":""},
+                    {"text":"메인 비주얼2", "image":"", "link":""},
+                    {"text":"메인 비주얼3", "image":"", "link":""},
+                    {"text":"메인 비주얼4", "image":"", "link":""},
+                ]
+            })
+            <div class="inner">
+
+
+                <div class="main_container col_wrap">
+                    <div class="main_sec col2">
+                        <div class="main_sec_inner">
+                            @@include("./home/_main_list.html", {
+                                "tit" : "메인 공지사항",
+                                "arr" : [
+                                    {"text":"공지사항1", "link":"https://www.npmjs.com/package/gulp-file-include"},
+                                    {"text":"공지사항2", "link":"https://dohoons.com/blog/1339/"},
+                                    {"text":"공지사항3", "link":"https://recoveryman.tistory.com/301?category=652407"}
+                                ]
+                            })
+                        </div>
+                    </div>
+                    <div class="main_sec  col2">
+                        <div class="main_sec_inner">
+                            @@include("./home/_main_list.html", {
+                                "tit" : "메인 게시판",
+                                "arr" : [
+                                    {"text":"게시물 1 게시물 1 게시물 1 게시물 1 ", "link":"https://www.npmjs.com/package/gulp-file-include"},
+                                    {"text":"게시물 2 게시물 2 게시물 2 게시물 2 게시물 2 게시물 2 ", "link":"https://dohoons.com/blog/1339/"},
+                                    {"text":"게시물 3 게시물 3 게시물 3 게시물 3 게시물 3 ", "link":"https://recoveryman.tistory.com/301?category=652407"}
+                                ]
+                            })
+                        </div>
+                    </div>
+                    <div class="main_sec  col1">
+                        <div class="main_sec_inner">
+                            @@include("./home/_main_list.html", {
+                                "tit" : "메인 뉴스",
+                                "arr" : [
+                                    {"text":"메인 뉴스 1 ", "link":"https://www.npmjs.com/package/gulp-file-include"},
+                                    {"text":"메인 뉴스 2 ", "link":"https://dohoons.com/blog/1339/"},
+                                    {"text":"메인 뉴스 3 ", "link":"https://recoveryman.tistory.com/301?category=652407"}
+                                ]
+                            })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        @@include("./include/footer.html")
+        <!-- // footer -->
+    </div>
+
+    <script type="text/javascript" src="/assets/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="/assets/js/common.js"></script>
+    <script>
+        const swiper = new Swiper('.main_visual',{
+            speed: 800,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            }
+        });
+    </script>
+</body>
+</html>

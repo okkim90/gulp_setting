@@ -1,0 +1,10 @@
+<div class="main_list">
+    @@if (context.tit){
+        <h2 class="main_list_tit">@@tit</h2>
+    }
+    <ul @@if (context.class){class="@@class"}>
+        @@for (var i = 0; i < arr.length; i++){
+            <li><a href=`+arr[i].link+` target="_blank">`+arr[i].text+`</a></li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,11 @@
+<div class="main_visual">
+    <div class="swiper-wrapper">
+        @@for (var i = 0; i < arr.length; i++) {
+            <div class="swiper-slide main_visual_item item`+(i+1)+`">
+                <div class="main_visual_item_cont">
+                    `+arr[i].text+`
+                </div>
+            </div>
+        }
+    </div>
+</div>

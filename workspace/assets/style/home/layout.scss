@@ -1,0 +1,12 @@
+.main_container {
+    padding: 100px 0;
+    margin: 0 -30px;
+    .main_sec {
+        padding: 30px;
+        box-sizing: border-box;
+        &_inner {
+            padding: 30px;
+            background-color: #e9e9e9;
+        }
+    }
+}

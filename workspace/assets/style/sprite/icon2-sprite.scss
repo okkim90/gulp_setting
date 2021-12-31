@@ -1,0 +1,134 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon2-pepe1-name: 'icon2-pepe1';
+$icon2-pepe1-x: 1329px;
+$icon2-pepe1-y: 0px;
+$icon2-pepe1-offset-x: -1329px;
+$icon2-pepe1-offset-y: 0px;
+$icon2-pepe1-width: 263px;
+$icon2-pepe1-height: 191px;
+$icon2-pepe1-total-width: 1592px;
+$icon2-pepe1-total-height: 1290px;
+$icon2-pepe1-image: '../images/sprite/icon2.png';
+$icon2-pepe1: (1329px, 0px, -1329px, 0px, 263px, 191px, 1592px, 1290px, '../images/sprite/icon2.png', 'icon2-pepe1', );
+$icon2-pepe2-name: 'icon2-pepe2';
+$icon2-pepe2-x: 568px;
+$icon2-pepe2-y: 775px;
+$icon2-pepe2-offset-x: -568px;
+$icon2-pepe2-offset-y: -775px;
+$icon2-pepe2-width: 512px;
+$icon2-pepe2-height: 398px;
+$icon2-pepe2-total-width: 1592px;
+$icon2-pepe2-total-height: 1290px;
+$icon2-pepe2-image: '../images/sprite/icon2.png';
+$icon2-pepe2: (568px, 775px, -568px, -775px, 512px, 398px, 1592px, 1290px, '../images/sprite/icon2.png', 'icon2-pepe2', );
+$icon2-pepe4-name: 'icon2-pepe4';
+$icon2-pepe4-x: 0px;
+$icon2-pepe4-y: 775px;
+$icon2-pepe4-offset-x: 0px;
+$icon2-pepe4-offset-y: -775px;
+$icon2-pepe4-width: 558px;
+$icon2-pepe4-height: 515px;
+$icon2-pepe4-total-width: 1592px;
+$icon2-pepe4-total-height: 1290px;
+$icon2-pepe4-image: '../images/sprite/icon2.png';
+$icon2-pepe4: (0px, 775px, 0px, -775px, 558px, 515px, 1592px, 1290px, '../images/sprite/icon2.png', 'icon2-pepe4', );
+$icon2-pepe5-name: 'icon2-pepe5';
+$icon2-pepe5-x: 719px;
+$icon2-pepe5-y: 0px;
+$icon2-pepe5-offset-x: -719px;
+$icon2-pepe5-offset-y: 0px;
+$icon2-pepe5-width: 600px;
+$icon2-pepe5-height: 630px;
+$icon2-pepe5-total-width: 1592px;
+$icon2-pepe5-total-height: 1290px;
+$icon2-pepe5-image: '../images/sprite/icon2.png';
+$icon2-pepe5: (719px, 0px, -719px, 0px, 600px, 630px, 1592px, 1290px, '../images/sprite/icon2.png', 'icon2-pepe5', );
+$icon2-pepe6-name: 'icon2-pepe6';
+$icon2-pepe6-x: 0px;
+$icon2-pepe6-y: 0px;
+$icon2-pepe6-offset-x: 0px;
+$icon2-pepe6-offset-y: 0px;
+$icon2-pepe6-width: 709px;
+$icon2-pepe6-height: 765px;
+$icon2-pepe6-total-width: 1592px;
+$icon2-pepe6-total-height: 1290px;
+$icon2-pepe6-image: '../images/sprite/icon2.png';
+$icon2-pepe6: (0px, 0px, 0px, 0px, 709px, 765px, 1592px, 1290px, '../images/sprite/icon2.png', 'icon2-pepe6', );
+$icon2-width: 1592px;
+$icon2-height: 1290px;
+$icon2-image: '../images/sprite/icon2.png';
+$icon2-sprites: ($icon2-pepe1, $icon2-pepe2, $icon2-pepe4, $icon2-pepe5, $icon2-pepe6, );
+$icon2: (1592px, 1290px, '../images/sprite/icon2.png', $icon2-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

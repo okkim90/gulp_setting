@@ -1,0 +1,45 @@
+{
+  "name": "gulp-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "del": "^6.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-pretty-html": "^2.0.10",
+    "gulp-remove-empty-lines": "^0.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^5.0.1",
+    "gulp.spritesmith": "^6.12.1",
+    "gulp.spritesmith-multi": "^3.1.0",
+    "merge-stream": "^2.0.0",
+    "run-sequence": "^2.2.1",
+    "sass": "^1.44.0"
+  },
+  "browserslist": [
+    "chrome > 0",
+    "ie > 0",
+    "firefox > 0"
+  ],
+  "dependencies": {
+    "update": "^0.7.4"
+  }
+}
